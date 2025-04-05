@@ -1,0 +1,178 @@
+.about-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid #6a11cb;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-placeholder:hover {
+    background-color: #e0e0e0;
+}
+
+.photo-placeholder:hover::after {
+    content: 'Change Photo';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(106, 17, 203, 0.8);
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.photo-placeholder i {
+    font-size: 64px;
+    color: #6a11cb;
+    transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover i {
+    transform: scale(1.1);
+}
+
+#profilePhotoInput {
+    display: none;
+}
+
+.about-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content section {
+    margin-bottom: 3rem;
+}
+
+.about-content section:last-child {
+    margin-bottom: 0;
+}
+
+.about-content h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.about-content h2 {
+    color: #6a11cb;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.about-content p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-content li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.about-content li:before {
+    content: "•";
+    color: #6a11cb;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.about-content strong {
+    color: #6a11cb;
+    font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for content sections */
+.about-content section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.about-content section:nth-child(1) { animation-delay: 0.2s; }
+.about-content section:nth-child(2) { animation-delay: 0.4s; }
+.about-content section:nth-child(3) { animation-delay: 0.6s; }
+.about-content section:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

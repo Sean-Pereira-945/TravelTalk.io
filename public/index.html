@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Blogs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Historical Blogs</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search blogs...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="write-blog-btn" onclick="location.href='#write-blog'">Write Blog</button>
+    </nav>
+
+    <main>
+        <section id="blogs" class="blogs-container">
+            <h2>Recent Posts</h2>
+            <div class="blog-grid" id="blogGrid"></div>
+        </section>
+
+        <section id="write-blog" class="write-blog-section">
+            <h2>Create New Blog Post</h2>
+            <form id="blogForm">
+                <input type="text" id="blogTitle" placeholder="Title" required>
+                <textarea id="blogContent" placeholder="Content" required></textarea>
+                <input type="url" id="imageUrl" placeholder="Image URL (e.g., https://example.com/image.jpg)" required>
+                <div class="button-group">
+                    <button type="submit" class="publish-btn">Publish Blog</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="tel" id="phone" placeholder="Phone Number">
+                </div>
+                <select id="subject" required>
+                    <option value="">-- Select a Subject --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for the latest historical content</label>
+                </div>
+                <button type="submit" class="send-message-btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>histblogs@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Fr. CRCE (Bandra)</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html> 
