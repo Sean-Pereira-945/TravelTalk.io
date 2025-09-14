@@ -1,4 +1,4 @@
-# Historical Blogs
+# TravelTalk.io
 
 A modern blog website focused on historical content, built with Node.js, Express, MongoDB, and vanilla JavaScript.
 
